@@ -1,6 +1,6 @@
 ﻿namespace BasicExamples
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.btnFib = new DevExpress.XtraEditors.SimpleButton();
-            this.lstFib = new System.Windows.Forms.ListView();
+            this.btnIslem = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // btnFib
             // 
-            this.btnFib.Location = new System.Drawing.Point(905, 369);
+            this.btnFib.Location = new System.Drawing.Point(30, 33);
             this.btnFib.Name = "btnFib";
             this.btnFib.Size = new System.Drawing.Size(94, 29);
             this.btnFib.TabIndex = 1;
             this.btnFib.Text = "Fibonacci";
             this.btnFib.Click += new System.EventHandler(this.btnFib_Click);
             // 
-            // lstFib
+            // btnIslem
             // 
-            this.lstFib.HideSelection = false;
-            this.lstFib.Location = new System.Drawing.Point(39, 96);
-            this.lstFib.Name = "lstFib";
-            this.lstFib.Size = new System.Drawing.Size(1089, 246);
-            this.lstFib.TabIndex = 2;
-            this.lstFib.UseCompatibleStateImageBehavior = false;
+            this.btnIslem.Location = new System.Drawing.Point(162, 33);
+            this.btnIslem.Name = "btnIslem";
+            this.btnIslem.Size = new System.Drawing.Size(94, 29);
+            this.btnIslem.TabIndex = 2;
+            this.btnIslem.Text = "Dört İşlem";
+            this.btnIslem.Click += new System.EventHandler(this.btnIslem_Click);
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 450);
-            this.Controls.Add(this.lstFib);
+            this.Controls.Add(this.btnIslem);
             this.Controls.Add(this.btnFib);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AnaSayfa";
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private DevExpress.XtraEditors.SimpleButton btnFib;
-        private System.Windows.Forms.ListView lstFib;
+        private DevExpress.XtraEditors.SimpleButton btnIslem;
     }
 }
 

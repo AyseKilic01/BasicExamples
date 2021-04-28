@@ -9,15 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BasicExamples
+namespace BasicExamples.Forms
 {
-    public partial class Form1 : Form
+    public partial class Fibonacci : Form
     {
-        public Form1()
+        public Fibonacci()
         {
             InitializeComponent();
         }
-        int Fibonacci(int n)
+        int Fibonaccis(int n)
         {
             int n1 = 0;
             int n2 = 1;
@@ -41,9 +41,9 @@ namespace BasicExamples
 
         private void btnFib_Click(object sender, EventArgs e)
         {
-          int result =  Fibonacci(5);
-            MessageBox.Show(result.ToString());
-            IntegerDivide(6, 0);
+            int result = Fibonaccis(5);
+           // MessageBox.Show(result.ToString());
+           // IntegerDivide(6, 0);
         }
     }
 }
