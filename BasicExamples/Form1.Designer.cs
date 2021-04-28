@@ -28,13 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnFib = new DevExpress.XtraEditors.SimpleButton();
+            this.lstFib = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // btnFib
+            // 
+            this.btnFib.Location = new System.Drawing.Point(905, 369);
+            this.btnFib.Name = "btnFib";
+            this.btnFib.Size = new System.Drawing.Size(94, 29);
+            this.btnFib.TabIndex = 1;
+            this.btnFib.Text = "Fibonacci";
+            this.btnFib.Click += new System.EventHandler(this.btnFib_Click);
+            // 
+            // lstFib
+            // 
+            this.lstFib.HideSelection = false;
+            this.lstFib.Location = new System.Drawing.Point(39, 96);
+            this.lstFib.Name = "lstFib";
+            this.lstFib.Size = new System.Drawing.Size(1089, 246);
+            this.lstFib.TabIndex = 2;
+            this.lstFib.UseCompatibleStateImageBehavior = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1164, 450);
+            this.Controls.Add(this.lstFib);
+            this.Controls.Add(this.btnFib);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+        private DevExpress.XtraEditors.SimpleButton btnFib;
+        private System.Windows.Forms.ListView lstFib;
     }
 }
 
