@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HesapMakine));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSonuc = new System.Windows.Forms.TextBox();
             this.btnOne = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
@@ -53,13 +53,13 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtSonuc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(35, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(440, 34);
-            this.textBox1.TabIndex = 1;
+            this.txtSonuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSonuc.Location = new System.Drawing.Point(35, 86);
+            this.txtSonuc.Name = "txtSonuc";
+            this.txtSonuc.Size = new System.Drawing.Size(440, 34);
+            this.txtSonuc.TabIndex = 1;
             // 
             // btnOne
             // 
@@ -68,6 +68,7 @@
             this.btnOne.Size = new System.Drawing.Size(73, 29);
             this.btnOne.TabIndex = 2;
             this.btnOne.Text = "1";
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // simpleButton4
             // 
@@ -197,6 +198,7 @@
             this.btnCarp.Size = new System.Drawing.Size(73, 29);
             this.btnCarp.TabIndex = 22;
             this.btnCarp.Text = "x";
+            this.btnCarp.Click += new System.EventHandler(this.btnCarp_Click);
             // 
             // btnTopla
             // 
@@ -205,14 +207,16 @@
             this.btnTopla.Size = new System.Drawing.Size(73, 29);
             this.btnTopla.TabIndex = 21;
             this.btnTopla.Text = "+";
+            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click);
             // 
             // btnCikar
             // 
-            this.btnCikar.Location = new System.Drawing.Point(415, 313);
+            this.btnCikar.Location = new System.Drawing.Point(402, 313);
             this.btnCikar.Name = "btnCikar";
             this.btnCikar.Size = new System.Drawing.Size(73, 29);
             this.btnCikar.TabIndex = 20;
             this.btnCikar.Text = "-";
+            this.btnCikar.Click += new System.EventHandler(this.btnCikar_Click);
             // 
             // simpleButton17
             // 
@@ -221,6 +225,7 @@
             this.simpleButton17.Size = new System.Drawing.Size(73, 29);
             this.simpleButton17.TabIndex = 19;
             this.simpleButton17.Text = "%";
+            this.simpleButton17.Click += new System.EventHandler(this.simpleButton17_Click);
             // 
             // labelControl1
             // 
@@ -258,7 +263,7 @@
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.btnOne);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSonuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HesapMakine";
@@ -271,7 +276,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSonuc;
         private DevExpress.XtraEditors.SimpleButton btnOne;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
