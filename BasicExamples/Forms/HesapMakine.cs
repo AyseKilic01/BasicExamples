@@ -32,8 +32,11 @@ namespace BasicExamples.Forms
 
             var type = typeof(DortIslem);
             //calisma aninda aktif instance uretmek icin
-            DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
-            sonuc = cs.Bolme();
+            //DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
+            //sonuc = cs.Bolme();
+            var instance = Activator.CreateInstance(type, vs[0], vs[1]);
+            sonuc = Convert.ToDouble(instance.GetType().GetMethod("Bolme").Invoke(instance, null));
+
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
 
@@ -41,6 +44,7 @@ namespace BasicExamples.Forms
 
         private void btnCarp_Click(object sender, EventArgs e)
         {
+            //reflection örneği
             var type = typeof(DortIslem);
             //calisma aninda aktif instance uretmek icin
             DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
