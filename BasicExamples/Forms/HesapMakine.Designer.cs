@@ -125,6 +125,7 @@
             this.btnNine.Size = new System.Drawing.Size(73, 29);
             this.btnNine.TabIndex = 11;
             this.btnNine.Text = "9";
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnEight
             // 
@@ -133,6 +134,7 @@
             this.btnEight.Size = new System.Drawing.Size(73, 29);
             this.btnEight.TabIndex = 12;
             this.btnEight.Text = "8";
+            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
             // 
             // btnSeven
             // 
@@ -141,6 +143,7 @@
             this.btnSeven.Size = new System.Drawing.Size(73, 29);
             this.btnSeven.TabIndex = 13;
             this.btnSeven.Text = "7";
+            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
             // 
             // btnSix
             // 
@@ -149,6 +152,7 @@
             this.btnSix.Size = new System.Drawing.Size(73, 29);
             this.btnSix.TabIndex = 14;
             this.btnSix.Text = "6";
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnThree
             // 
@@ -157,6 +161,7 @@
             this.btnThree.Size = new System.Drawing.Size(73, 29);
             this.btnThree.TabIndex = 15;
             this.btnThree.Text = "3";
+            this.btnThree.Click += new System.EventHandler(this.btnThree_Click);
             // 
             // btnFive
             // 
@@ -165,6 +170,7 @@
             this.btnFive.Size = new System.Drawing.Size(73, 29);
             this.btnFive.TabIndex = 16;
             this.btnFive.Text = "5";
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnFour
             // 
@@ -173,6 +179,7 @@
             this.btnFour.Size = new System.Drawing.Size(73, 29);
             this.btnFour.TabIndex = 17;
             this.btnFour.Text = "4";
+            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
             // 
             // btnTwo
             // 
@@ -181,6 +188,7 @@
             this.btnTwo.Size = new System.Drawing.Size(73, 29);
             this.btnTwo.TabIndex = 18;
             this.btnTwo.Text = "2";
+            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
             // 
             // btnDivide
             // 
