@@ -8,6 +8,10 @@ namespace BasicExamples.ReflectionC
 {
    public  class DortIslem
     {
+        public DortIslem()
+        {
+
+        }
         private int _sayi1, _sayi2;
         public DortIslem(int sayi1, int sayi2)
         {
@@ -30,6 +34,11 @@ namespace BasicExamples.ReflectionC
         public int Cikarma()
         {
             return _sayi1 - _sayi2;
+        }
+
+        public int Divide(int sayi1, int sayi2)
+        {
+            return sayi1 / sayi2;
         }
     }
 }

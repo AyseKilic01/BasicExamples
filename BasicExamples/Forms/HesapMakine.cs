@@ -18,7 +18,8 @@ namespace BasicExamples.Forms
         int sayi2 = 0;
         double sonuc = 0;
         List<int> vs = new List<int>();
-        
+        public delegate int math_Op(int number1, int number2);
+
         public HesapMakine()
         {
             InitializeComponent();
@@ -30,14 +31,17 @@ namespace BasicExamples.Forms
         
         private void btnDivide_Click(object sender, EventArgs e)
         {
-
-            var type = typeof(DortIslem);
-            //calisma aninda aktif instance uretmek icin
-            //DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
-            //sonuc = cs.Bolme();
-            var instance = Activator.CreateInstance(type, vs[0], vs[1]);
-            sonuc = Convert.ToDouble(instance.GetType().GetMethod("Bolme").Invoke(instance, null));
-
+            DortIslem operation = new DortIslem();
+            //var type = typeof(DortIslem);
+            ////calisma aninda aktif instance uretmek icin
+            ////DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
+            ////sonuc = cs.Bolme();
+            //var instance = Activator.CreateInstance(type, vs[0], vs[1]);
+            //sonuc = Convert.ToDouble(instance.GetType().GetMethod("Bolme").Invoke(instance, null));
+            //delegate kullanimi
+            //deger dondurmeyen parametreler ile başka nesneler aracılığı ile iletişim kurma
+            math_Op op = operation.Divide;
+            sonuc = op(vs[0], vs[1]);
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
 
