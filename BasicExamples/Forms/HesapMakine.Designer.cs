@@ -206,7 +206,7 @@
             this.btnCarp.Size = new System.Drawing.Size(73, 29);
             this.btnCarp.TabIndex = 22;
             this.btnCarp.Text = "x";
-            this.btnCarp.Click += new System.EventHandler(this.btnCarp_Click);
+            this.btnCarp.Click += new System.EventHandler(this.btnMultiplication_Click);
             // 
             // btnTopla
             // 
@@ -215,7 +215,7 @@
             this.btnTopla.Size = new System.Drawing.Size(73, 29);
             this.btnTopla.TabIndex = 21;
             this.btnTopla.Text = "+";
-            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click);
+            this.btnTopla.Click += new System.EventHandler(this.btnSum_Click);
             // 
             // btnCikar
             // 
@@ -224,7 +224,7 @@
             this.btnCikar.Size = new System.Drawing.Size(73, 29);
             this.btnCikar.TabIndex = 20;
             this.btnCikar.Text = "-";
-            this.btnCikar.Click += new System.EventHandler(this.btnCikar_Click);
+            this.btnCikar.Click += new System.EventHandler(this.btnExtraction_Click);
             // 
             // simpleButton17
             // 

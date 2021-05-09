@@ -1,4 +1,5 @@
-﻿using BasicExamples.ReflectionC;
+﻿using BasicExamples.DelegateS;
+using BasicExamples.ReflectionC;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -31,61 +32,38 @@ namespace BasicExamples.Forms
         
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            DortIslem operation = new DortIslem();
-            //var type = typeof(DortIslem);
-            ////calisma aninda aktif instance uretmek icin
-            ////DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
-            ////sonuc = cs.Bolme();
-            //var instance = Activator.CreateInstance(type, vs[0], vs[1]);
-            //sonuc = Convert.ToDouble(instance.GetType().GetMethod("Bolme").Invoke(instance, null));
-            //delegate kullanimi
-            //deger dondurmeyen parametreler ile başka nesneler aracılığı ile iletişim kurma
-            math_Op op = operation.Divide;
+            //delegate used
+            FourOperations operations = new FourOperations();
+            math_Op op = operations.Divide;
             sonuc = op(vs[0], vs[1]);
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
 
         }
 
-        private void btnCarp_Click(object sender, EventArgs e)
+        private void btnMultiplication_Click(object sender, EventArgs e)
         {
-            //reflection örneği
-            var type = typeof(DortIslem);
-            var metods = type.GetMethods();
-            foreach(var i in metods)
-            {
-                i.Name.ToString();
-            }
-            //calisma aninda aktif instance uretmek icin
-            var instance = Activator.CreateInstance(type, vs[0], vs[1]);
-            sonuc = Convert.ToDouble(instance.GetType().GetMethod("Carp").Invoke(instance, null));
-            //DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
-            //sonuc = cs.Carp();
+            FourOperations operations = new FourOperations();
+            math_Op op = operations.Multiplication;
+            sonuc = op(vs[0], vs[1]);
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
         }
 
-        private void btnTopla_Click(object sender, EventArgs e)
+        private void btnSum_Click(object sender, EventArgs e)
         {
-            var type = typeof(DortIslem);
-            //calisma aninda aktif instance uretmek icin
-            var instance = Activator.CreateInstance(type, vs[0], vs[1]);
-            //Metod info - GetMethod().Invoke
-            sonuc = Convert.ToDouble(instance.GetType().GetMethod("Topla").Invoke(instance, null));
-            //DortIslem cs = (DortIslem)Activator.CreateInstance(type, sayi1, sayi2);
-            //sonuc = cs.Topla();
+            FourOperations operations = new FourOperations();
+            math_Op op = operations.Sum;
+            sonuc = op(vs[0], vs[1]);
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
         }
 
-        private void btnCikar_Click(object sender, EventArgs e)
+        private void btnExtraction_Click(object sender, EventArgs e)
         {
-            var type = typeof(DortIslem);
-            //calisma aninda aktif instance uretmek icin
-            var instance = Activator.CreateInstance(type, vs[0], vs[1]);
-            sonuc = Convert.ToDouble(instance.GetType().GetMethod("Cikarma").Invoke(instance, null));
-            //DortIslem cs = (DortIslem)Activator.CreateInstance(type, vs[0], vs[1]);
-            //sonuc = cs.Cikarma();
+            FourOperations operations = new FourOperations();
+            math_Op op = operations.Extraction;
+            sonuc = op(vs[0], vs[1]);
             txtSonuc.Text = "";
             txtSonuc.Text = sonuc.ToString();
         }

@@ -58,6 +58,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegateS\FourOperations.cs" />
     <Compile Include="Forms\HesapMakine.cs">
       <SubType>Form</SubType>
     </Compile>
