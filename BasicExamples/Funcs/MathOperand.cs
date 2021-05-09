@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,6 +27,8 @@ namespace BasicExamples.Funcs
             //with parameter
             Func<int, int, int> value = oper.RandomX;
             //without parameter
+            //how to change random number, with thread.sleep
+            Thread.Sleep(1000);
             Func<int> funcvalue = () => new Random().Next(100);
             textBox2.Text = funcvalue().ToString();
             textBox1.Text = value(sayi1,sayi2).ToString();
