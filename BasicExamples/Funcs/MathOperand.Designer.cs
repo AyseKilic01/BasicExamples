@@ -30,14 +30,15 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCalculate = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(27, 85);
+            this.textBox1.Location = new System.Drawing.Point(12, 85);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 27);
+            this.textBox1.Size = new System.Drawing.Size(80, 27);
             this.textBox1.TabIndex = 0;
             // 
             // btnCalculate
@@ -49,11 +50,20 @@
             this.btnCalculate.Text = "Hesapla";
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox2.Location = new System.Drawing.Point(108, 85);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(77, 27);
+            this.textBox2.TabIndex = 2;
+            // 
             // MathOperand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(203, 228);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.textBox1);
             this.Name = "MathOperand";
@@ -67,5 +77,6 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private DevExpress.XtraEditors.SimpleButton btnCalculate;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

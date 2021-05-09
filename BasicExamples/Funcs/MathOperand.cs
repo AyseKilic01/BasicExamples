@@ -23,7 +23,11 @@ namespace BasicExamples.Funcs
             int sayi1 = new Random().Next(100);
             int sayi2 = new Random().Next(100);
             DortIslem oper = new DortIslem();
+            //with parameter
             Func<int, int, int> value = oper.RandomX;
+            //without parameter
+            Func<int> funcvalue = () => new Random().Next(100);
+            textBox2.Text = funcvalue().ToString();
             textBox1.Text = value(sayi1,sayi2).ToString();
         }
     }
