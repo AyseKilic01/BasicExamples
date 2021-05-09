@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicExamples.Funcs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,12 @@ namespace BasicExamples
         private void btnIslem_Click(object sender, EventArgs e)
         {
             Forms.HesapMakine frm = new Forms.HesapMakine();
+            frm.Show();
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            MathOperand frm = new MathOperand();
             frm.Show();
         }
     }

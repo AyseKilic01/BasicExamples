@@ -77,6 +77,12 @@
     <Compile Include="Forms\Fibonacci.Designer.cs">
       <DependentUpon>Fibonacci.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcs\MathOperand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcs\MathOperand.Designer.cs">
+      <DependentUpon>MathOperand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionC\DortIslem.cs" />
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fibonacci.resx">
       <DependentUpon>Fibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcs\MathOperand.resx">
+      <DependentUpon>MathOperand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.btnFib = new DevExpress.XtraEditors.SimpleButton();
             this.btnIslem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRandom = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // btnFib
@@ -51,11 +52,21 @@
             this.btnIslem.Text = "Dört İşlem";
             this.btnIslem.Click += new System.EventHandler(this.btnIslem_Click);
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(295, 33);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(137, 29);
+            this.btnRandom.TabIndex = 3;
+            this.btnRandom.Text = "Random Çarpma";
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 450);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.btnIslem);
             this.Controls.Add(this.btnFib);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -69,6 +80,7 @@
         #endregion
         private DevExpress.XtraEditors.SimpleButton btnFib;
         private DevExpress.XtraEditors.SimpleButton btnIslem;
+        private DevExpress.XtraEditors.SimpleButton btnRandom;
     }
 }
 
