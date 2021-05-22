@@ -22,7 +22,6 @@ namespace GradingStudents
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("Bekle");
             Console.ReadLine();
             
         }
@@ -30,20 +29,28 @@ namespace GradingStudents
         {
             List<int> grade = new List<int>();
             List<int> success = new List<int>();
+            int kalan = 0;
             for (int i = 40; i <= 100; i = i + 5)
             {
                 grade.Add(i);
             }
-            for(int i =0; i<grades.Count; i++)
+            for (int i = 0; i < grades.Count; i++)
             {
-                if(grades[i] - grade[i] <= 3)
+                for (int j = 0; j < grade.Count; j++)
                 {
-                    grades[i] = grade[i];
-                    success.Add(grades[i]);
+                    if (grade[j] - grades[i] < 3 && grades[i] > 33 && grade[j] - grades[i] > 0)
+                    {
+                        kalan = grades[i] % 5;
+
+                    }
+                }
+                if (grades[i] > 33 && kalan != 0)
+                {
+                    grades[i] = grades[i] + (5 - kalan);
+                    kalan = 0;
                 }
             }
-
-            return success;
+            return grades;
         }
     }
 }
